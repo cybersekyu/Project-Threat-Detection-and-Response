@@ -1,0 +1,10 @@
+name: Suspicious Process Creation
+type: any
+index: logs-*
+filter:
+  - query:
+      query_string:
+        query: "process_name:powershell AND (command_line:*Base64* OR command_line:*EncodedCommand*)"
+alert:
+  - post
+http_post_url: "http://ai_service:8000/enrich"
