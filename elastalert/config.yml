@@ -1,4 +1,4 @@
-es_host: elasticsearch
+es_host: ubuntu-elk
 es_port: 9200
 writeback_index: elastalert_status
 rules_folder: /opt/elastalert/rules
