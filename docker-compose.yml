@@ -63,7 +63,7 @@ services:
     restart: unless-stopped
     container_name: elastalert
     volumes:
-      - ./elastalert/config.yml:/opt/elastalert/config.yml
+      - ./elastalert/config:/opt/elastalert/config
       - ./elastalert/rules:/opt/elastalert/rules
     depends_on:
       - elasticsearch
